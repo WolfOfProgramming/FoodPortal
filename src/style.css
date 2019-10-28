@@ -1,0 +1,410 @@
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.webName {
+    font-size: 200px;
+    text-align: center;
+    color: hsl(0, 0%, 95%);
+    height: 300px;
+}
+.webName:first-letter {
+    font-size: 220px;
+}
+.info {
+    font-size: 100px;
+    color: hsl(0, 0%, 95%);
+}
+.logIn {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.offlineContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 574px;
+}
+.email, .password {
+    padding: 20px;
+    width: 430px;
+}
+.email,
+ .password,
+  .logInButton,
+   .signUp {
+    height: 50px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 25px;
+}
+.logInButton {
+    width: 135px;
+}
+.logInButton,
+ .signUp {
+    background-color: hsl(199, 55%, 44%);
+    margin: 18px 5px;
+    color: hsl(0, 0%, 75%);
+}
+.logInButton:hover,
+ .signUp:hover {
+    background-color: hsl(199, 63%, 30%);
+    color: hsl(0, 0%, 100%);
+ }
+.signUp {
+    width: 135px;
+}
+h3, 
+ label {
+    color: hsl(0, 0%, 95%);
+}
+.hidden {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+.loggedIn {
+    display: none;
+    background-color: rgb(245, 245, 255);
+    height: auto;
+}
+
+.offline {
+    background-image: url("./images/photo.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.content {
+    width: 900px;
+    height: 1000px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -15px hsl(0, 0%, 5%);
+    padding: 20px;
+}
+.signOut{
+    text-align: right;
+    width: 500px;
+    z-index: 1;
+}
+.helloUser {
+    width: 800px;
+    z-index: 1;
+}
+
+.bar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 0%, 12%);
+    font-size: 42px;
+    width: 100vw;
+    height: 700px;
+    background-image: url("./images/Schowek01.jpg");
+    box-shadow: 5px hsl(0, 0%, 5%)
+}
+.blueBacklight {
+    margin: 20px;
+}
+.blueBacklight:hover{
+    color: hsl(187, 62%, 39%);
+    cursor: pointer;
+}
+.siteTitle {
+    text-align: center;
+    font-size: 200px;
+    width: 100%;
+    position: absolute;
+    height: 300px;
+}
+.siteTitle:first-letter {
+    font-size: 220px;
+}
+.mainContent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.friendSection, .myProfile {
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px -15px hsl(0, 0%, 5%);
+    margin: 30px;
+    padding: 20px;
+}
+.change {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+.profileSection {
+    width: 100%;
+    font-size: 32px;
+}
+
+.informations {
+    display: grid;
+    grid-template-columns: 100%;
+}
+.informations input {
+    margin: 12px;
+    padding: 10px;
+    height: 35px;
+}
+.informations label {
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color: #4a4a4a;
+}
+.informations button {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 140px;
+    height: 55px;
+    color: hsl(0, 0%, 12%);
+    background: linear-gradient(35deg, hsl(168, 28%, 50%), hsl(130, 60%, 40%));
+    margin-top: 20px;
+    border: 0;
+}
+.informations button:hover
+ .friendsList:hover,
+  .friendsRequest:hover {
+    background:  linear-gradient(35deg, hsl(165, 87%, 70%), hsl(75, 86%, 81%));
+    color: black;
+}
+.friendsList {
+    color: hsl(0, 0%, 12%);
+    background: linear-gradient(35deg, hsl(168, 28%, 50%), hsl(130, 60%, 40%));
+    width: 45%;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0;
+}
+.friendsRequest {
+    color: hsl(0, 0%, 12%);
+    border-radius: 20px;
+    width: 50%;
+    height: 55px;
+    font-size: 20px;  
+    cursor: pointer; 
+    border: 0;
+}
+.friendsListSection, .friendRequestsSection {
+    overflow: auto;
+    overflow-x: hidden;
+}
+.friendRequestsSection {
+    display: none;
+}
+
+.descripton {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px !important;
+}
+.addRecipe {
+    width: 100%;
+    height: 700px;
+    background-color: hsl(140, 53%, 93%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -15px hsl(0, 0%, 5%);
+}
+.recipeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addFriendContainer {
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+    left: 17px;
+}
+.friendEmailInput {
+    width: 300px;
+    height: 50px;
+    border-radius: 12px;
+    padding: 14px;
+    background: rgb(245, 241, 241);
+    border: 0;
+    margin: 0 0 5px 15px;
+    
+}
+.addFriendButton {
+    border: 0;
+    height: 50px;
+    width: 125px;
+    border-radius: 12px;
+    margin: 5px;
+    background: linear-gradient(57deg, hsl(113, 48%, 69%), hsl(71, 38%, 57%));
+}
+.addFriendButton:hover {
+    background: linear-gradient(37deg, hsl(124, 73%, 64%), hsl(73, 94%, 68%));
+}
+.friendHeader {
+    text-align: center;
+    font-size: 30px;
+}
+.friendForm {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 20px -15px hsl(0, 0%, 5%);
+    width: 470px;
+    height: 130px;
+}
+.nameOfFood {
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    height: 45px;
+    border: 0;
+    border-bottom: 2px solid hsl(219, 37%, 19%);
+}
+.ingredients, 
+ .steps {
+    width: 800px;
+    padding: 20px;
+    height: 200px;
+    margin: 10px;
+    border: 0;
+    border-bottom: 2px solid hsl(219, 37%, 19%);
+}
+.submitRecipe {
+    width: 150px;
+    height: 50px;
+    border: 0;
+    margin: 10px;
+    border-bottom: 2px solid hsl(219, 37%, 19%);
+    background-color: white;
+}
+.labelForFile {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 10px;
+}
+.quotes {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 35px;
+    word-wrap: break-word;
+    width: 450px;
+}
+.quotesContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.uniquePlacement {
+    align-self: flex-end;
+}
+.choosenFile {
+    visibility: hidden;
+}
+.labelForFile {
+    background: white;
+    width: 260px;
+    border: 0;
+    border-bottom: 2px solid hsl(219, 37%, 19%);
+    padding: 20px;
+    font-size: 16px;
+    text-align: center
+}
+.tick {
+    display: none;
+    width: 63px;
+    height: 63px;
+    margin: 10px;
+}
+.tickContainer {
+    display: flex;
+}
+.recipeDisplay {
+    width: 900px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px -15px hsl(0, 0%, 5%);
+    padding: 20px;
+    margin: 10px auto;
+}
+.recipeDisplay h3 {
+    font-size: 35px;
+    color: hsl(0, 0%, 22%);
+}
+.recipeDisplay h2 {
+    font-size: 50px;
+    text-align: center;
+    color: hsl(0, 0%, 10%)
+}
+
+.recipeDisplay p {
+    word-wrap: break-word;
+    font-size: 20px;
+    margin: 5px;
+}
+.img {
+    max-width: 800px;
+    max-height:  600px;
+}
+ul li {
+    font-size: 25px;
+    margin: 5px;
+}
+ul li span {
+    background: #3b3838;
+    color: white;
+    margin:5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.white {
+    background: white;
+    width: 50%;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 0;
+}
+.gradient {
+    background: linear-gradient(35deg, hsl(168, 28%, 50%), hsl(130, 60%, 40%));
+    width: 50%;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+li {
+    margin: 5px;
+    padding: 5px;
+}
+button {
+    cursor: pointer;
+}
+.showTick {
+    width: 63px;
+    height: 63px;
+    margin: 10px;
+}
+.backOffline {
+    background-image: url("./images/photo.jpg");
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FoodPortal</title>
+    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="./src/bulma.css">
+    <link rel="stylesheet" href="./src/style.css">   
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100i&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <div id="offline" class="offline">
+        <h1 class="webName">FoodPortal</h1>
+        <div class="offlineContainer">
+            <p class="quotes">"Put your head down and work hard. Never wait for things to happen, make them happen for yourself through hard graft and not giving up." - Gordon Ramsay</p>
+            <form id="logIn" class="logIn">
+                <h2 class="info">Log In</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" class="email" placeholder="Enter your Email">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="password" placeholder="Enter your Password">
+                <div>
+                    <button id="logInButton" class="logInButton">Log In</button>
+                    <button id="createANewAccount" class="signUp">Sign Up</button>
+                </div>
+            </form>
+            <p class="quotes uniquePlacement">"If my cuisine were to be defined by just one taste, it would be that of subtle, aromatic, extra-virgin olive oil." - Alain Ducasse</p>
+        </div>
+    </div>
+    <div id="loggedIn" class="loggedIn">
+        <div class="bar">
+            <div class="helloUser">
+                <span class="blueBacklight" id="sayHelloToUser"></span>
+            </div>
+            <h2 class="siteTitle">FoodPortal</h2>
+            <div class="signOut" id="signOut">
+                <span class="blueBacklight">Sing Out</span>
+            </div>
+            <!--<span class="blueBacklight" id="sayHelloToUser"></span>-->
+        </div>
+        <div class="mainContent">
+            <div class="friendSection">
+                <div class="change">
+                    <button class="friendsList" id="friendsList">Friends list</button>
+                    <button class="friendsRequest" id="friendsRequest">Friends request</button>
+                </div>
+                <div class="friendsListSection" id="friendsListSection">
+                    <!--Data goes here-->
+                </div>
+                <div class="friendRequestsSection" id="friendRequestsSection">
+                    <!--Data goes here-->
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="descripton">Find your new Favorite Recipe!</h2>
+                <div class="addRecipe">
+                    <form id="addRecipeForm" class="recipeForm">
+                        <input type="text" placeholder="Name of Food" id="nameOfFood" class="nameOfFood">
+                        <textarea name="Ingredients" id="ingredients" cols="30" rows="10" placeholder="Ingredients" class="ingredients"></textarea>
+                        <textarea name="Steps" id="steps" cols="30" rows="10" placeholder="Steps" class="steps"></textarea>
+                        <div class="tickContainer">
+                            <label for="choosenFile" class="labelForFile">Choose Food Image</label>
+                            <img src="./src/images/tick.png" alt="tick" class="tick" id="tick">
+                        </div>
+                        <input type="file" id="choosenFile" class="choosenFile">
+                        <button type="submit" class="submitRecipe">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="myProfile">
+                <h2 class="profileSection">Profile Section</h2>
+                <div>
+                    <form class="informations" id="informations">
+                        <label class="spansOfInformations" id="nameToRead">Name: </label>
+                        <input type="text" class="hiddenInput" placeholder="Name" id="name">
+                        <label class="spansOfInformations" id="surenameToRead">Surename:</label>
+                        <input type="text" class="hiddenInput" placeholder="Surename" id="surename">
+                        <label class="spansOfInformations" id="nickToRead">Nick:</label>
+                        <input type="text" class="hiddenInput" placeholder="Nick" id="nick">
+                        <label class="spansOfInformations" id="favoriteFoodToRead">Favorite Food:</label>
+                        <input type="text" class="hiddenInput" placeholder="Favorite Food" id="favoriteFood">
+                        <button id="changeInformationsAboutYouButton" class="spansOfInformations">Change</button>
+                        <div>
+                            <button class="hiddenInput" id="confirmInformationsAboutYou">Confirm</button>
+                            <button class="hiddenInput" id="cancelChangingInformations">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="addFriendContainer">
+                <form id="addFriendContainer" class="friendForm">
+                    <h2 class="friendHeader">Add new Friends!</h2>
+                    <input type="email" id="friendEmailInput" placeholder="Your friend email!" class="friendEmailInput">
+                    <button type="submit" id="addFriendButton" class="addFriendButton">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="recipesContainer" id="recipesContainer"></div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDkz39lIE4ZUxNmwTsiUMsN_dyY7dk0PJQ",
+            authDomain: "foodportal-68775.firebaseapp.com",
+            databaseURL: "https://foodportal-68775.firebaseio.com",
+            projectId: "foodportal-68775",
+            storageBucket: "gs://foodportal-68775.appspot.com",
+            messagingSenderId: "714771078175",
+            appId: "1:714771078175:web:d3413c08d3dd40ac"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
